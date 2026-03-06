@@ -55,7 +55,7 @@ span{
 .menuItem{
     margin-right: 20px;
 }
-.darkmode i{
+.lightmode i{
  cursor: pointer;
 }
 .introduction{
@@ -86,7 +86,7 @@ span{
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    background-color: var(--nav);    
+    background: linear-gradient(135deg, #4F1787, #6367FF);;    
     border-radius: 50px;
     margin:12px;
 }
@@ -96,4 +96,117 @@ span{
 }
 .aboutMe{
     margin: 12px;
+}
+.gridlist{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    padding: 0;
+}
+
+.gridItem{
+    background: linear-gradient(135deg, #4F1787, #6367FF);
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 20px; 
+}
+.gridIcon{
+    min-width: 60px;
+    font-size: 40px;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 10px;
+}
+.gridItem:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 8px 5px #000000;
+}
+.gridItem:hover .gridIcon{
+    transform: rotate(5deg) scale(1.1);
+    transition: transform 0.2s ease;
+}
+.frontLanguage{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+.language{
+    min-width: 50px;
+    min-height: 50px;
+    background: linear-gradient(135deg, #4F1787, #6367FF);
+    padding: 8px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.language:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 5px 4px 21px 5px rgba(0,0,0,0.45);
+}
+.frontImg img{
+    width: 32px;
+    height: 32px;
+}
+.frontImg i{
+    color:lightblue;
+    font-size: 32px;
+}
+.projects ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 0;
+}
+.project{
+    list-style: none;
+}
+.projectCard{
+    flex-direction: column;
+    margin: 20px;
+    background: linear-gradient(135deg, #4F1787, #6367FF);
+    border-radius: 20px;
+}
+.projectImgContainer{
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px 20px 0 0;
+}
+.projectImgContainer img{
+    width: 90%;
+    display: block;
+    padding-top:10px ;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.projectTitle{
+    text-align: center;
+    margin-top:12px;
+    padding: 12px;
+}
+.projectCardDesc{
+    margin: 12px;
+}
+.projectLinks{
+    text-align: center;
+    align-items: center;
+}
+.projectLinks i{
+    font-size: 32px;
+}
+.projectLinks a{
+    text-decoration: none;
+    color: inherit;
 }
