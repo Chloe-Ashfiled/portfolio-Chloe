@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Libre Baskerville", sans-serif;
+}
+:root{
+  --bg: #6367FF;
+  --nav: #8494FF;
+  --text: #222;
+  --accent: #4F1787;
+  --highlight: #FFDBFD;
+}
+
+.darkmode{
+  --bg: #000B58;
+  --nav: #003161;
+  --text: #ffffff;
+  --accent: #006A67;
+  --highlight: #FFF4B7;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+nav{
+    background-color:var(--nav);
+}
+span{
+    color: var(--highlight);
+}
+.logo{
+    max-height: 30px;
+}
+.navItems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menuLists{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menuItem:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    background-color:var(--accent);
+}
+.menuItem{
+    margin-right: 20px;
+}
+.darkmode i{
+ cursor: pointer;
+}
+.introduction{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+.introTitle{
+    font-size: 40px;
+    font-weight: 900;
+}
+.about{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:20px;
+}
+.aboutCard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--nav);    
+    border-radius: 50px;
+    margin:12px;
+}
+.aboutTitle{
+    font-size: 40px;
+    font-weight: 900;
+}
+.aboutMe{
+    margin: 12px;
+}
