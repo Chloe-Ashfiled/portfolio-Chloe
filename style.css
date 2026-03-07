@@ -5,20 +5,21 @@
     box-sizing: border-box;
     font-family:"Libre Baskerville", sans-serif;
 }
-:root{
-  --bg: #6367FF;
-  --nav: #8494FF;
-  --text: #222;
-  --accent: #4F1787;
-  --highlight: #FFDBFD;
-}
 
+
+:root{
+  --bg: #DEE8CE;
+  --nav: #BB6653;
+  --text: #000000;
+  --highlight: #F08B51;
+  --accent: #FFF8E8;
+}
 .darkmode{
-  --bg: #000B58;
-  --nav: #003161;
-  --text: #ffffff;
-  --accent: #006A67;
-  --highlight: #FFF4B7;
+  --bg: #0f172a;     
+  --nav: #1e293b;     
+  --text: #e2e8f0;     
+  --highlight: #f97316;
+  --accent: #1e293b;   
 }
 html{
     scroll-behavior: smooth;
@@ -41,6 +42,11 @@ span{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 16px 80px;
+}
+.navItems a{
+    text-decoration: none;
+    color: inherit;
 }
 .menuLists{
     display: flex;
@@ -54,9 +60,18 @@ span{
 }
 .menuItem{
     margin-right: 20px;
+    padding: 4px;
+    border-radius: 8px;
+}
+.darkmode i{
+    cursor: pointer;
+    font-size: 16px;
+    margin:8px;
 }
 .lightmode i{
- cursor: pointer;
+    cursor: pointer;
+    font-size: 16px;
+    margin:8px;
 }
 .introduction{
     min-height: 100vh;
@@ -86,9 +101,12 @@ span{
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(135deg, #4F1787, #6367FF);;    
+    background: linear-gradient(135deg, #F08B51, #BB6653);
     border-radius: 50px;
     margin:12px;
+}
+.aboutCard span{
+    color: var(--accent);
 }
 .aboutTitle{
     font-size: 40px;
@@ -105,22 +123,21 @@ span{
 }
 
 .gridItem{
-    background: linear-gradient(135deg, #4F1787, #6367FF);
+    background: linear-gradient(135deg, #F08B51, #BB6653);
     list-style: none;
     display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content:center;
-    flex-wrap: wrap;
-    margin: 10px;
-    border-radius: 20px; 
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    border-radius: 20px;
 }
 .gridIcon{
-    min-width: 60px;
-    font-size: 40px;
-    margin-top: 8px;
-    padding: 8px;
-    border-radius: 10px;
+    font-size: 32px;
+    min-width: 40px;
+}
+.darkmode .gridIcon{
+    font-size: 32px;
+    min-width: 40px;
 }
 .gridItem:hover{
     cursor: pointer;
@@ -141,15 +158,6 @@ span{
     align-items: center;
     text-align: center;
     gap:20px;
-}.stack{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap:20px;
 }
 .frontLanguage{
     display: flex;
@@ -161,7 +169,7 @@ span{
 .language{
     min-width: 50px;
     min-height: 50px;
-    background: linear-gradient(135deg, #4F1787, #6367FF);
+    background: linear-gradient(135deg, #F08B51, #BB6653);
     padding: 8px;
     border-radius: 20px;
     display: flex;
@@ -169,6 +177,7 @@ span{
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin:24px 8px 24px 0;
 }
 .language:hover{
     cursor: pointer;
@@ -195,10 +204,13 @@ span{
 .project{
     list-style: none;
 }
+.projectTitle{
+    color: var(--accent);
+}
 .projectCard{
     flex-direction: column;
     margin: 20px;
-    background: linear-gradient(135deg, #4F1787, #6367FF);
+    background: linear-gradient(135deg, #F08B51, #BB6653);
     border-radius: 20px;
 }
 .projectCard:hover{
@@ -241,4 +253,115 @@ span{
 .projectLinks a{
     text-decoration: none;
     color: inherit;
+}
+.contact{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;    
+}
+.contact:first-child{
+    width: 40%;
+    padding: 40px;
+}
+
+.contactTitle{
+    font-size: 40px;
+}
+.contactDesc p{
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+.contactLinks {
+    font-size:20px;
+}
+.contactLinks i{
+    cursor: pointer;
+    font-size: 32px;
+}
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.location i{
+    font-size: 32px;
+    transition: transform 0.35s ease;
+}
+
+.location p{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    white-space: nowrap;
+    padding-top: 8px;
+    transition: opacity 0.5s ease, transform 0.35s ease;
+}
+
+.location:hover i{
+    transform: translateX(-150px);
+}
+
+.location:hover p{
+    opacity: 1;
+    transform: translateX(-40%);
+}
+
+.sendMail{
+    display: flex;
+    flex-direction: column;
+    width: 70%;   /* half of the contact section */
+    padding: 40px;
+    background-color: var(--accent);
+    margin: 12px;
+    border-radius: 20px;
+}
+
+.sendMail label{
+    margin-top: 20px;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.sendInput{
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: var(--bg);
+}
+
+.sendMsg{
+    min-height: 120px;
+    resize: vertical;
+}
+
+.sendBtn{
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    background-color: var(--highlight);
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:24px;
+}
+.sendBtn:hover{
+    cursor: pointer;
+    transition: all 0.1s;
+    transform: translateY(-3px);
+}
+.sendBtn:active{
+    cursor: pointer;
+    scale:0.95;
+    transition: all 0.1s;
 }
