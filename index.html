@@ -15,10 +15,10 @@
                 <img src="img/Logo.png" alt="website logo">
             </div>
             <div class="menuLists">
-                <h3 class="menuItem">About</h3>
-                <h3 class="menuItem">Stack</h3>
-                <h3 class="menuItem">Project</h3>
-                <h3 class="menuItem">Contact Me </h3>
+                    <a href="#about" class="menuItem">About</a>
+                    <a href="#stack" class="menuItem">Stack</a>
+                    <a href="#project" class="menuItem">Project</a>
+                    <a href="#contact" class="menuItem">Contact Me</a>
             </div>
             <div class="lightmode">
                 <i class="fa-solid fa-sun"></i>
@@ -29,7 +29,7 @@
         <div class="introTitle">Hi, I'm <span>Nhan</span> Le</div>
         <div class="intro">I'm a <span>front end developer</span> based in Saigon,VietNam</div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <div class="aboutCard">
             <h2 class="aboutTitle">About <span>Me</span></h2>
             <p class="aboutMe">I specialize in building responsive and user-friendly web interfaces using <span>HTML, CSS, and JavaScript</span>. I enjoy turning designs into interactive web experiences while focusing on organized and maintainable code</p>
@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div class="stack">
+    <div class="stack" id="stack">
         <div class="stackList">
             <h3>Front end: </h3>
             <ul class="frontLanguage">
@@ -108,7 +108,7 @@
                 <li class="language">
                     Node.js
                     <div class="frontImg">
-                        <img src="img/css.png">
+                        <img src="img/nodeJs.png">
                     </div>
                 </li>
                 <li class="language">
@@ -159,7 +159,7 @@
             </ul>
         </div>
     </div>
-    <div class="projects">
+    <div class="projects" id="project">
         <ul>
             <li class="project">
                 <div class="projectCard">
@@ -167,9 +167,7 @@
                         <img src="img/eshop.png">
                     </div>
                     <div class="projectTitle">
-                        <span>
                             E-commerce Platform
-                        </span>
                     </div>
                     <div class="projectCardDesc">
                         A responsive landing page for a pet shop featuring a product slider, interactive product options, and modern UI design
@@ -191,9 +189,7 @@
                         <img src="img/todolist.png">
                     </div>
                     <div class="projectTitle">
-                        <span>
                             Task Flow
-                        </span>
                     </div>
                     <div class="projectCardDesc">
                         A Trello-inspired task management application built with JavaScript that allows users to create tasks, organize them into cards, and move them between lists. Task data is stored using browser Local Storage to maintain state between sessions.
@@ -216,9 +212,7 @@
                             <img src="img/create acc.png">
                     </div>
                     <div class="projectTitle">
-                        <span>
                             Modern Login Page
-                        </span>
                     </div>
                     <div class="projectCardDesc">
                         A responsive authentication interface with animated transitions between login and registration forms. Built with HTML, CSS, and JavaScript, the project uses dynamic class toggling to create smooth UI panel animations and an interactive user experience.
@@ -241,9 +235,7 @@
                         <img src="img/weather 2.png">
                     </div>
                     <div class="projectTitle">
-                        <span>
                             Weather App
-                        </span>
                     </div>
                     <div class="projectCardDesc">
                         A weather application that allows users to search for any city and view real-time weather information such as temperature and current conditions. The app retrieves live data from a weather API and displays it through a clean, responsive user interface.
@@ -260,37 +252,46 @@
             </li>
         </ul>
     </div>
-    <div class="contact">
-        <div class="contactTitle">
-            <h3>Get In <span>Touch</span></h3>
-        </div>
-        <div class="conactDesc">
-            <p>I'd love to hear about your ideas, projects, or challenges and explore how we can build something impactful together.</p>
-        </div>
-    </div>
-    <div class="contactLinks">
-        <h3>Connect With Me</h3>
-        <i class="fa-solid fa-envelope"></i>
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-linkedin-in"></i>
-        <div class="location">
-             <i class="fa-solid fa-location-dot"></i>
-             <p>Ho Chi Minh City, VietNam</p>
-        </div>
-    </div>
-    <div class="sendMail">
-            <h2>Send a Message</h2>
-            <label>Your Name</label>
-            <input type="text" placeholder="Hi.."class="sendInput">  
-            <label>Your Email</label>
-            <input type="email" placeholder="I reach you at.."class="sendInput">  
-            <label>Your Message</label>
-            <textarea class="sendInput sendMsg" placeholder="Hello, I'd like to talk about..."></textarea>
-            <div class="sendBtn">
-                Send Message
-                <i class="fa-solid fa-location-arrow"></i>
+    <div class="contact" id="contact">
+        <div>
+            <div class="contactTitle">
+                <h3>Get In <span>Touch</span></h3>
             </div>
+            <div class="contactDesc">
+                <p>I'd love to hear about your ideas, projects, or challenges and explore how we can build something impactful together.</p>
+            </div>
+            <div class="contactLinks">
+                <h3>Connect With Me</h3>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Ho Chi Minh City, VietNam</p>
+                </div>
+            </div>
+        </div>
+        <div class="sendMail">
+                <h2>Send a Message</h2>
+                <div>
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Hi.."class="sendInput">
+                </div>
+                    <label>Your Email</label>
+                    <input type="email" placeholder="I reach you at.."class="sendInput">  
+                <div>
+                </div>     
+                    <label>Your Message</label>
+                    <textarea class="sendInput sendMsg" placeholder="Hello, I'd like to talk about..."></textarea>
+                <div>
 
+                </div>
+                <div class="sendBtn">
+                    Send Message
+                    <i class="fa-solid fa-location-arrow"></i>
+                </div>
+
+        </div>
     </div>
 </body>
 <script src="./scripts.js"></script>
