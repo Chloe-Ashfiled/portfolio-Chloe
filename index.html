@@ -6,6 +6,16 @@
     <script src="https://kit.fontawesome.com/5ca0f43a2b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/Logo.png">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "m6X52iSXpF7krMp8S",
+            });
+        })();
+    </script>
     <title>NhanLC</title>
 </head>
 <body>
@@ -303,36 +313,37 @@
             </div>
             <div class="contactLinks">
                 <h3>Connect With Me</h3>
-                <i class="fa-solid fa-envelope"></i>
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
+                <a href="https://github.com/Chloe-Ashfiled" class="contactLinksApp">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:chloeashfield36@gmail.com" class="contactLinksApp">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/nhan-lee-748a483b8/" class="contactLinksApp">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
                 <div class="location">
                     <i class="fa-solid fa-location-dot"></i>
                     <p>Ho Chi Minh City, VietNam</p>
                 </div>
             </div>
         </div>
-        <div class="sendMail">
-                <h2>Send a Message</h2>
-                <div>
-                    <label>Your Name</label>
-                    <input type="text" placeholder="Hi.."class="sendInput">
-                </div>
-                    <label>Your Email</label>
-                    <input type="email" placeholder="I reach you at.."class="sendInput">  
-                <div>
-                </div>     
-                    <label>Your Message</label>
-                    <textarea class="sendInput sendMsg" placeholder="Hello, I'd like to talk about..."></textarea>
-                <div>
+        <form id="contact-form" class="sendMail">
+            <h2>Send a Message</h2>
 
-                </div>
-                <div class="sendBtn">
-                    Send Message
-                    <i class="fa-solid fa-location-arrow"></i>
-                </div>
+            <label>Your Name</label>
+            <input type="text" name="name" required class="sendInput">
 
-        </div>
+            <label>Your Email</label>
+            <input type="email" name="email" required class="sendInput">  
+
+            <label>Your Message</label>
+            <textarea name="message" required class="sendInput sendMsg"></textarea>
+
+            <button type="submit" class="sendBtn">
+                Send Message
+            </button>
+        </form>
     </div>
 </body>
 <script src="./scripts.js"></script>

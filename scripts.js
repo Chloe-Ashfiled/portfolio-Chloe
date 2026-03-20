@@ -1,20 +1,18 @@
-const toggle = document.querySelector(".lightmode");
-const icon = document.querySelector(".lightmode i");
-const savedTheme=localStorage.getItem("theme");
 
-if (savedTheme === "dark") {
-  document.body.classList.add("darkmode");
-  icon.classList.replace("fa-sun", "fa-moon");
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
 
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("darkmode");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-  if (document.body.classList.contains("darkmode")) {
-    icon.classList.replace("fa-sun", "fa-moon");
-    localStorage.setItem("theme", "dark");
-  } else {
-    icon.classList.replace("fa-moon", "fa-sun");
-    localStorage.setItem("theme", "light");
-  }
+        emailjs.sendForm("service_6kxeti8", "template_0704yru", this)
+            .then(() => {
+                alert("Message sent!");
+                form.reset();
+            })
+            .catch((error) => {
+                console.error(error);
+                alert("Failed to send message.");
+            });
+    });
 });

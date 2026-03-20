@@ -14,13 +14,6 @@
   --highlight: #F08B51;
   --accent: #FFF8E8;
 }
-.darkmode{
-  --bg: #0f172a;     
-  --nav: #1e293b;     
-  --text: #e2e8f0;     
-  --highlight: #f97316;
-  --accent: #1e293b;   
-}
 html{
     scroll-behavior: smooth;
 }
@@ -57,6 +50,7 @@ span{
     cursor: pointer;
     transition: all 0.1s;
     background-color:var(--accent);
+    transition: all 0.2s ease-in-out;
 }
 .menuItem{
     margin-right: 20px;
@@ -143,7 +137,7 @@ span{
     cursor: pointer;
     transition: all 0.1s;
     transform: translateY(-3px);
-    box-shadow: 5px 5px 8px 5px #000000;
+    box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.45);
 }
 .gridItem:hover .gridIcon{
     transform: rotate(5deg) scale(1.1);
@@ -282,6 +276,10 @@ span{
     cursor: pointer;
     font-size: 32px;
 }
+.contactLinks i:hover{
+    transition: all 0.1s;
+    transform: translateY(-3px);
+}
 .location{
     display: flex;
     justify-content: center;
@@ -364,4 +362,12 @@ span{
     cursor: pointer;
     scale:0.95;
     transition: all 0.1s;
+}
+.contactLinksApp{
+    text-decoration: none;
+    color: var(--text);
+}
+.contactLinksAppL:visited{
+    text-decoration: none;
+    color: var(--text);
 }
